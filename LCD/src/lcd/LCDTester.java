@@ -43,7 +43,7 @@ public class LCDTester {
                 
                 do
                 {
-                    System.out.print("Entrada: ");
+                    System.out.print("Entrada: \n");
                     comando = lector.next();
                     if(!comando.equalsIgnoreCase(CADENA_FINAL))
                     {
