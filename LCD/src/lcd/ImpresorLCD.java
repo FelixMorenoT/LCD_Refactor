@@ -120,8 +120,8 @@ public class ImpresorLCD {
 
         switch (numero) {
             case 1:
-                segList.add(3);
                 segList.add(4);
+                segList.add(3);
                 break;
             case 2:
                 segList.add(5);
