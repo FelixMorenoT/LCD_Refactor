@@ -213,6 +213,15 @@ public class ImpresorLCD {
      * @param numeroImp Numero a Imprimir
      * @param espacio Espacio Entre digitos
      */
+    private void inicializadorMatriz() {
+        // Inicializa matriz
+        for (int i = 0; i < this.totalFilas; i++) {
+            for (int j = 0; j < this.totalColum; j++) {
+                this.matrizImpr[i][j] = " ";
+            }
+        }
+    }
+
     private void imprimirNumero(int size, String numeroImp, int espacio) {
         int pivotX = 0;
         char[] digitos;
@@ -237,21 +246,10 @@ public class ImpresorLCD {
 
         // crea el arreglo de digitos
         digitos = numeroImp.toCharArray();
-
-        // Inicializa matriz
-        for (int i = 0; i < this.totalFilas; i++) {
-            for (int j = 0; j < this.totalColum; j++) {
-                this.matrizImpr[i][j] = " ";
-            }
-        }
-
+        
+        inicializadorMatriz();
+        
         for (char digito : digitos) {
-
-            //Valida que el caracter sea un digito
-            if (!Character.isDigit(digito)) {
-                throw new IllegalArgumentException("Caracter " + digito
-                        + " no es un digito");
-            }
 
             int numero = Integer.parseInt(String.valueOf(digito));
 
