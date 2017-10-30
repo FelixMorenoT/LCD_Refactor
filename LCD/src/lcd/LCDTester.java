@@ -22,7 +22,7 @@ public class LCDTester {
             try (Scanner lector = new Scanner(System.in)) {
 
                 do {
-                    System.out.println("Entra Ejemplo. 123 0");
+                    System.out.println("Entra Ejemplo: 123 0");
                     System.out.print("Entrada: \n");
                     comando = lector.next();
 

@@ -1,6 +1,5 @@
 package lcd;
 
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -115,84 +114,89 @@ public class ImpresorLCD {
      *
      * @param numero Digito
      */
-    private void adicionarDigito(int numero) {
-
-        // Establece los segmentos de cada numero
-        List<Integer> segList = new ArrayList<>();
+    private List<Integer> creadorListaNumeros(int numero) {
+        List<Integer> numeroLCD = new ArrayList<>();
 
         switch (numero) {
             case 1:
-                segList.add(4);
-                segList.add(3);
+                numeroLCD.add(4);
+                numeroLCD.add(3);
                 break;
             case 2:
-                segList.add(5);
-                segList.add(3);
-                segList.add(6);
-                segList.add(2);
-                segList.add(7);
+                numeroLCD.add(5);
+                numeroLCD.add(3);
+                numeroLCD.add(6);
+                numeroLCD.add(2);
+                numeroLCD.add(7);
                 break;
             case 3:
-                segList.add(5);
-                segList.add(3);
-                segList.add(6);
-                segList.add(4);
-                segList.add(7);
+                numeroLCD.add(5);
+                numeroLCD.add(3);
+                numeroLCD.add(6);
+                numeroLCD.add(4);
+                numeroLCD.add(7);
                 break;
             case 4:
-                segList.add(1);
-                segList.add(6);
-                segList.add(3);
-                segList.add(4);
+                numeroLCD.add(1);
+                numeroLCD.add(6);
+                numeroLCD.add(3);
+                numeroLCD.add(4);
                 break;
             case 5:
-                segList.add(5);
-                segList.add(1);
-                segList.add(6);
-                segList.add(4);
-                segList.add(7);
+                numeroLCD.add(5);
+                numeroLCD.add(1);
+                numeroLCD.add(6);
+                numeroLCD.add(4);
+                numeroLCD.add(7);
                 break;
             case 6:
-                segList.add(5);
-                segList.add(1);
-                segList.add(6);
-                segList.add(2);
-                segList.add(7);
-                segList.add(4);
+                numeroLCD.add(5);
+                numeroLCD.add(1);
+                numeroLCD.add(6);
+                numeroLCD.add(2);
+                numeroLCD.add(7);
+                numeroLCD.add(4);
                 break;
             case 7:
-                segList.add(5);
-                segList.add(3);
-                segList.add(4);
+                numeroLCD.add(5);
+                numeroLCD.add(3);
+                numeroLCD.add(4);
                 break;
             case 8:
-                segList.add(1);
-                segList.add(2);
-                segList.add(3);
-                segList.add(4);
-                segList.add(5);
-                segList.add(6);
-                segList.add(7);
+                numeroLCD.add(1);
+                numeroLCD.add(2);
+                numeroLCD.add(3);
+                numeroLCD.add(4);
+                numeroLCD.add(5);
+                numeroLCD.add(6);
+                numeroLCD.add(7);
                 break;
             case 9:
-                segList.add(1);
-                segList.add(3);
-                segList.add(4);
-                segList.add(5);
-                segList.add(6);
-                segList.add(7);
+                numeroLCD.add(1);
+                numeroLCD.add(3);
+                numeroLCD.add(4);
+                numeroLCD.add(5);
+                numeroLCD.add(6);
+                numeroLCD.add(7);
                 break;
             case 0:
-                segList.add(1);
-                segList.add(2);
-                segList.add(3);
-                segList.add(4);
-                segList.add(5);
-                segList.add(7);
+                numeroLCD.add(1);
+                numeroLCD.add(2);
+                numeroLCD.add(3);
+                numeroLCD.add(4);
+                numeroLCD.add(5);
+                numeroLCD.add(7);
                 break;
             default:
                 break;
         }
+        return numeroLCD;
+    }
+
+    private void adicionarDigito(int numero) {
+
+        // Establece los segmentos de cada numero
+        List<Integer> segList = creadorListaNumeros(numero);
 
         Iterator<Integer> iterator = segList.iterator();
 
@@ -300,6 +304,5 @@ public class ImpresorLCD {
         imprimirNumero(2, parametros, espacioDig);
 
     }
-
 
 }
