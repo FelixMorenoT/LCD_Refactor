@@ -1,4 +1,6 @@
+package lcd;
 
+import lcd.ImpresorLCD;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,6 +22,7 @@ public class LCDTester {
             try (Scanner lector = new Scanner(System.in)) {
 
                 do {
+                    System.out.println("Entra Ejemplo. 123 0");
                     System.out.print("Entrada: \n");
                     comando = lector.next();
 

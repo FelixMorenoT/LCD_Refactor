@@ -1,3 +1,5 @@
+package lcd;
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -299,19 +301,5 @@ public class ImpresorLCD {
 
     }
 
-    /**
-     *
-     * Metodo encargado de validar si una cadena es numerica
-     *
-     * @param cadena Cadena
-     */
-    static boolean isNumeric(String cadena) {
-        try {
-            Integer.parseInt(cadena);
-            return true;
-        } catch (NumberFormatException ex) {
-            return false;
-        }
-    }
 
 }
