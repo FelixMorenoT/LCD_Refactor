@@ -275,14 +275,7 @@ public class ImpresorLCD {
 
             adicionarDigito(numero);
         }
-
-        // Imprime matriz
-        for (int i = 0; i < this.totalFilas; i++) {
-            for (int j = 0; j < this.totalColum; j++) {
-                System.out.print(this.matrizImpr[i][j]);
-            }
-            System.out.println();
-        }
+        imprimirMatriz();
     }
 
     /**
@@ -301,8 +294,18 @@ public class ImpresorLCD {
         parametros = comando;
 
         // Realiza la impresion del numero
-        imprimirNumero(2, parametros, espacioDig);
+        imprimirNumero(3, parametros, espacioDig);
 
+    }
+
+    private void imprimirMatriz() {
+        // Imprime matriz
+        for (int i = 0; i < this.totalFilas; i++) {
+            for (int j = 0; j < this.totalColum; j++) {
+                System.out.print(this.matrizImpr[i][j]);
+            }
+            System.out.println();
+        }
     }
 
 }
